@@ -1,0 +1,51 @@
+Project Reflection
+The steps you took to create and manage branches:
+1) from main, I created and switched to a new branch 'feature/header':
+psrga@LAPTOP-KGMU5T75 MINGW64 ~/Desktop/2025-RTT-74/version-control-simulation-rodian-gaitan (main)
+$ git checkout -b feature/header
+  
+2) I created/made changes to file:
+psrga@LAPTOP-KGMU5T75 MINGW64 ~/Desktop/2025-RTT-74/ version-control-simulation-rodian-gaitan (feature/header)
+$ touch index.html
+
+3) I staged changes:
+psrga@LAPTOP-KGMU5T75 MINGW64 ~/Desktop/2025-RTT-74/ version-control-simulation-rodian-gaitan (feature/header)
+$ git add .
+
+4) I committed those changes:
+psrga@LAPTOP-KGMU5T75 MINGW64 ~/Desktop/2025-RTT-74/ version-control-simulation-rodian-gaitan (feature/header)
+$ git commit -m "Added header section to index.html"
+
+5) I went back to main branch
+psrga@LAPTOP-KGMU5T75 MINGW64 ~/Desktop/2025-RTT-74/ version-control-simulation-rodian-gaitan (feature/header)
+$ git checkout main
+
+How you handled the merge conflict:
+1) switched to ‘main’ branch’
+psrga@LAPTOP-KGMU5T75 MINGW64 ~/Desktop/2025-RTT-74/version-control-simulation-rodian-gaitan (feature/header)
+$ git checkout main
+
+2) merged the ‘feature/footer’ branch into ‘main’
+psrga@LAPTOP-KGMU5T75 MINGW64 ~/Desktop/2025-RTT-74/version-control-simulation-rodian-gaitan  (main)
+$ git merge feature/footer 
+
+3) merged the ‘feature/header’ branch into ‘main’
+psrga@LAPTOP-KGMU5T75 MINGW64 ~/Desktop/2025-RTT-74/version-control-simulation-rodian-gaitan (main)
+$ git merge feature/header
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html  ---------------{Conflict created!}
+Automatic merge failed; fix conflicts and then commit the result.
+
+4) Accessed the file (index.html) in my feature branch. Located the markers in Vs Code (or the diff if in GitHub); deleted the faulty element line; kept the rectified element line.
+
+5) Staged changes
+psrga@LAPTOP-KGMU5T75 MINGW64 ~/Desktop/2025-RTT-74/version-control-simulation-rodian-gaitan (main|MERGING)
+$ git add .
+
+6) Comitted changes
+psrga@LAPTOP-KGMU5T75 MINGW64 ~/Desktop/2025-RTT-74/version-control-simulation-rodian-gaitan (main|MERGING)
+$ git commit -m "fixed conflict"
+[main 478a76b] fixed conflict
+
+How the pull request process helped you ensure code quality and collaboration.
+The pull request process helped me ensure code quality and collaboration by allowing my peers to carefully review all the changes I made before merging them into the main branch. Through GitHub, my peers are able to see every line of code, leave comments, point out potential bugs, or suggest improvements. This provides an extra layer of quality control, because someone else can catch mistakes that I might have missed. This going back-and-forth process will help me ensure that my final version of the code for my feature is clean and consistent with the project’s goals. I’m still waiting for someone to comment on or approve my Pull Request, but if approved, I’d proceed to 1) merge the pull request into the main branch 2) delete the feature branch from Github 3)update my local main branch to reflect the latest merged changes of GitHub.  [git checkout main] the [ git pull origin main]
